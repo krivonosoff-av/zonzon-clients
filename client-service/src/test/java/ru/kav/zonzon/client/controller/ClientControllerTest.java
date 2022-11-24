@@ -1,18 +1,15 @@
-package ru.kav.zonzon.client.domain.controller;
+package ru.kav.zonzon.client.controller;
 
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.ResponseEntity;
 import org.springframework.test.context.ActiveProfiles;
 import ru.kav.zonzon.client.domain.model.Client;
 
 import java.net.URI;
-import java.util.List;
 import java.util.function.Supplier;
 
 @ActiveProfiles("dev")
@@ -26,9 +23,6 @@ public class ClientControllerTest {
     private TestRestTemplate restTemplate;
 
     private final Supplier<URI> uri = () -> URI.create("http://localhost:" + port + "/api/clients");
-
-    @BeforeEach
-
 
     @Test
     public void createClientWillSuccess() {

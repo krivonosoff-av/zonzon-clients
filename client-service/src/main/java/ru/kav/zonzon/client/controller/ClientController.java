@@ -1,4 +1,4 @@
-package ru.kav.zonzon.client.domain.controller;
+package ru.kav.zonzon.client.controller;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
